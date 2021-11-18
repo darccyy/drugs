@@ -7,9 +7,19 @@ body {
   color: white;
 }
 
-h1 {
+h1,
+p {
   text-align: center;
+}
+
+h1 {
+  font-size: 25px;
   line-height: 40%;
+}
+
+p {
+  line-height: 30%;
+  margin-bottom: 10px;
 }
 
 #contain {
