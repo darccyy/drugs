@@ -3,9 +3,9 @@ var data = {
     h: 512,
     ratio: 1,
   },
-  tiles: 10,
-  snakes: 5,
-  ladders: 5,
+  tiles: 8,
+  snakes: 4,
+  ladders: 4,
 };
 
 var color = {
