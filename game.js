@@ -168,16 +168,29 @@ function main() {
 }
 function update(mod) {
   if (gameState == "play") {
-    if (F.keys.Space) {
-      if (global.once_roll) {
-        global.once_roll = false;
-        global.once_roll = false;
-        roll();
+    if (F.keys.Space || F.keys.a || F.keys.l) {
+      if (global.once_key) {
+        global.once_key = false;
+
+        if (F.keys.Space) {
+          turn = turn ? 0 : 1;
+          global.lastDice = "SKIP";
+          global.lastRoll = Date.now();
+        } else if (F.keys.a) {
+          if (turn === 0) {
+            roll();
+          }
+        } else if (F.keys.l) {
+          if (turn === 1) {
+            roll();
+          }
+        }
       }
     } else {
-      global.once_roll = true;
+      global.once_key = true;
     }
   }
+  $("#turn").text(turn + 1);
 }
 
 var then = Date.now();
