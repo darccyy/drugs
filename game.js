@@ -7,6 +7,7 @@ ctx.imageSmoothingEnabled = false;
 $("#wrap").append(canvas);
 $("#wrap").css("width", canvas.width + "px");
 $("#wrap").css("height", canvas.height + "px");
+F.createListeners();
 
 var gameState = "start";
 var global = {};
